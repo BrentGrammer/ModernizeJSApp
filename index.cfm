@@ -6,12 +6,14 @@
   <title>Index</title>
 </head>
 <body>
-  <h1>Hello from Lucee2</h1>
-  <cfset x = 1>
-  <cfscript>
-    writeDump(x);
-  </cfscript>
-  <cfoutput>#serialize(url)#</cfoutput>
+  <cfif StructKeyExists(url, "act")>
+    <cfswitch expression="#url.act#"> 
+      <cfcase value="main"><cfinclude template="views/mainTemplate.cfm"></cfcase>
+      <cfdefaultcase><p>default content</p></cfdefaultcase> 
+    </cfswitch>
+  <cfelse>
+    <p>Hello From Lucee</p>
+  </cfif>
   <script type="module" src="/main.js"></script>
 </body>
 </html>
