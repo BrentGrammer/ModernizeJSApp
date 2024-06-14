@@ -1,0 +1,19 @@
+services:
+  server:
+    # build: ./backend
+    image: "ortussolutions/commandbox:lucee5"
+    container_name: luceeServer
+    environment:
+      - cfconfig_adminPassword=admin
+      - BOX_SERVER_PROFILE=development
+    ports:
+      - 8080:8080
+    volumes:
+      - ./:/app
+  # frontend:
+  #   build: ./frontend
+  #   container_name: hroptions-test-frontend
+  #   ports:
+  #     - 5173:5173
+  #   depends_on:
+  #     - backend
