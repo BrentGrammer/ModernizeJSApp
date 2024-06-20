@@ -2,6 +2,7 @@
     "profile": "production",
     "web": {
       "blockCFAdmin": false,
-      "blockSensitivePaths": false
+      "blockSensitivePaths": false,
+      "webroot": "/app/wwwroot"
     }
 }
