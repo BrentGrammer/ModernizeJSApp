@@ -5,7 +5,6 @@
 ## Prerequisites
 
 - Docker Desktop
-- Node.js
 
 ## Run the app
 
