@@ -1,3 +1,3 @@
-console.log('Hello from main.js');
+console.log('Hello from firstscript.js');
 
-var epc = {};
+var epc = {}; // This is a global variable used by other scripts listed underneath it in script tags in the original app.
