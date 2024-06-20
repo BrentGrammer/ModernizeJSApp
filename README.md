@@ -1,6 +1,6 @@
-# CFML App
+# Modernize an Application
 
-- This is an experimental project meant to figure out how to add tooling and bundlers such as Vite, Parcel, ESBuild or Webpack to a CFML app using vanilla JavaScript and no tooling.
+- This is an experimental project meant to figure out how to add tooling and bundlers such as Vite, Parcel, ESBuild or Webpack to a app using vanilla JavaScript, Lucee and no tooling.
 
 ## Prerequisites
 
