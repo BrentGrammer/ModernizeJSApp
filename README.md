@@ -1,4 +1,4 @@
-# Modernize an Application
+# Modernize using Parcel
 
 - This is an experimental project meant to explore how to add tooling and bundlers such as Vite, Parcel, ESBuild or Webpack to a app using vanilla JavaScript, Lucee and no tooling.
 
