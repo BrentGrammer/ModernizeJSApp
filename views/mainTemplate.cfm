@@ -1,4 +1,4 @@
 <main>
     <h1>Main Template</h1>
-    <script src="dist/main.js"></script>
+    <script src="dist/thirdscript.js"></script>
 </main>

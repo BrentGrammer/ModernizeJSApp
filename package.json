@@ -2,8 +2,8 @@
   "name": "your-app",
   "version": "1.0.0",
   "scripts": {
-    "start": "parcel watch src/main.js --out-dir dist",
-    "build": "parcel build src/main.js --out-dir dist"
+    "start": "parcel watch src/mainTemplateJS/thirdscript.js src/page2TemplateJS/page2script.js --dist-dir dist",
+    "build": "parcel build src/template1/main1.js src/template2/main2.js --dist-dir dist"
   },
   "devDependencies": {
     "parcel": "^2.12.0"
