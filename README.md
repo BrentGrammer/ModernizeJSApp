@@ -5,9 +5,10 @@
 ## Prerequisites
 
 - Docker Desktop
+- Node.js
 
 ## Run the app
-
+- in a terminal: `npm install`
 - `docker compose up`
 - Go to http://localhost:8080
   - To visit the other page, go to http://localhost:8080/?page=page2

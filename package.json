@@ -1,0 +1,11 @@
+{
+  "name": "your-app",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel watch src/main.js --out-dir dist",
+    "build": "parcel build src/main.js --out-dir dist"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
