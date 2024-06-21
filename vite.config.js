@@ -8,6 +8,7 @@ export default defineConfig({
   build: {
     outDir: "../wwwroot/js",
     emptyOutDir: true,
+    sourcemap: true,
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, "src/thirdscript.js"),
