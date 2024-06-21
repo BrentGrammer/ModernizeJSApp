@@ -8,9 +8,10 @@
     "build": "vite build",
     "preview": "vite preview",
     "watch": "vite build --watch",
-    "start": "docker compose up && npm run watch"
+    "start": "concurrently \"docker compose up\" \"npm run watch\""
   },
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "vite": "^5.3.1"
   }
 }
