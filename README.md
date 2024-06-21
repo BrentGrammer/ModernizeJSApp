@@ -6,7 +6,13 @@
 
 - Bundles are produced, but source maps are lost which are vital during development for debugging.
 
-## Start the server
+## Run the app
+
+### Install dependencies
+
+- `npm install`
+
+### Start the server with Docker and run Vite bundler
 
 - `docker compose up`
 - Go to http://localhost:8080
