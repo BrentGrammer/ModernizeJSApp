@@ -33,3 +33,4 @@
 - splitting your js files into folders in the src folder will do the same when they are bundled in case you want to separate main bundles for different pages.
 - Comes with auto hot reload working in the browser out of the box
 - Minifies and does not include unused code or comments in production build files.
+  - Auto removes dead code!
