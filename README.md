@@ -10,8 +10,9 @@
 
 - `docker compose up`
 - Go to http://localhost:8080
+  - To visit the other page, go to http://localhost:8080/?page=page2
 
 ## Branches
 
-- Each branch is an iteration of the app trying out different tooling and setup. 
+- Each branch is an iteration of the app trying out different tooling and setup.
 - Consult the README in the branch for prerequisites and documentation.

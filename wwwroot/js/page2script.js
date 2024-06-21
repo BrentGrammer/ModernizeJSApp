@@ -1,0 +1,1 @@
+console.log("This is javascript that runs on page2");
