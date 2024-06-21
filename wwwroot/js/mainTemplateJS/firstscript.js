@@ -142,14 +142,14 @@
       this[globalName] = mainExports;
     }
   }
-})({"clG3k":[function(require,module,exports) {
+})({"cDD3T":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 var HMR_USE_SSE = false;
-module.bundle.HMR_BUNDLE_ID = "08d155c2e81e1cb5";
+module.bundle.HMR_BUNDLE_ID = "0ddab8a982ca5de9";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, HMR_USE_SSE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -583,21 +583,10 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     });
 }
 
-},{}],"l5veU":[function(require,module,exports) {
-var _firstscriptJs = require("./firstscript.js");
-var _secondscriptJs = require("./secondscript.js");
-console.log("Do we have someGlobal? ", someGlobal.run());
-console.log("hello from thirdscript.js");
-
-},{"./firstscript.js":"1hQ3K","./secondscript.js":"t3Rix"}],"1hQ3K":[function(require,module,exports) {
+},{}],"1hQ3K":[function(require,module,exports) {
 console.log("Hello from firstscript.js");
 window.someGlobal = {}; // This is a global variable used by other scripts listed underneath it in script tags in the original app.
 
-},{}],"t3Rix":[function(require,module,exports) {
-someGlobal.run = function() {
-    return "hello from someGlobal.run in second script.";
-};
+},{}]},["cDD3T","1hQ3K"], "1hQ3K", "parcelRequire937d")
 
-},{}]},["clG3k","l5veU"], "l5veU", "parcelRequire937d")
-
-//# sourceMappingURL=thirdscript.js.map
+//# sourceMappingURL=firstscript.js.map
