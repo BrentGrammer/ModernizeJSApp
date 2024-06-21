@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "scripts": {
     "clean:output": "rimraf wwwroot/js",
-    "start": "npm run clean:output && parcel watch src/mainBundles/*.js --dist-dir wwwroot/js",
+    "watch": "npm run clean:output && parcel watch src/mainBundles/*.js --dist-dir wwwroot/js",
+    "start": "concurrently \"docker compose up\" \"npm run watch\"",
     "build": "npm run clean:output && parcel build src/mainBundles/*.js --dist-dir wwwroot/js"
   },
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "parcel": "^2.12.0",
     "rimraf": "^5.0.7"
   }
