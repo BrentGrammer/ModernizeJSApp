@@ -1,5 +1,3 @@
-// vite.config.js
-// update this as needed
 import { defineConfig } from "vite";
 import path from 'path';
 
@@ -8,7 +6,7 @@ export default defineConfig({
   build: {
     outDir: "../wwwroot/js",
     emptyOutDir: true,
-    sourcemap: true,
+    sourcemap: true, // set this to get source files in devtools
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, "src/thirdscript.js"),
