@@ -2,6 +2,9 @@
 
 - This is an experimental project meant to explore how to add tooling and bundlers such as Vite, Parcel, ESBuild or Webpack to a app using vanilla JavaScript, Lucee and no tooling.
 
+## Issues
+- how to automate npm run start after docker container starts serving Lucee server?
+
 ## Prerequisites
 
 - Docker Desktop
