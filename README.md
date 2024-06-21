@@ -19,3 +19,7 @@
 
 - Each branch is an iteration of the app trying out different tooling and setup.
 - Consult the README in the branch for prerequisites and documentation.
+
+## Notes on Parcel
+
+- splitting your js files into folders in the src folder will do the same when they are bundled in case you want to separate main bundles for different pages.
