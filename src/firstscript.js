@@ -1,3 +1,3 @@
 console.log("Hello from firstscript.js");
 
-var someGlobal = {};
+window.someGlobal = {};
