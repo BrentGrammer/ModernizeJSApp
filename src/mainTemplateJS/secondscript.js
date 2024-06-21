@@ -1,3 +1,3 @@
-epc.run = function () {
-  return "hello from epc.run in second script.";
+someGlobal.run = function () {
+  return "hello from someGlobal.run in second script.";
 };

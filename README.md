@@ -8,8 +8,10 @@
 - Node.js
 
 ## Run the app
+
 - in a terminal: `npm install`
 - `docker compose up`
+- in a terminal: `npm run start` to bundle js with parcel in watch mode.
 - Go to http://localhost:8080
   - To visit the other page, go to http://localhost:8080/?page=page2
 
