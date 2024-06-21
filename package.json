@@ -1,11 +1,17 @@
 {
   "name": "your-app",
   "version": "1.0.0",
+  "targets": {
+    "main": {
+      "optimize": true
+    }
+  },
   "scripts": {
     "clean:output": "rimraf wwwroot/js",
     "watch": "npm run clean:output && parcel watch src/mainBundles/*.js --dist-dir wwwroot/js",
     "start": "concurrently \"docker compose up\" \"npm run watch\"",
-    "build": "npm run clean:output && parcel build src/mainBundles/*.js --dist-dir wwwroot/js"
+    "build": "npm run clean:output && parcel build src/mainBundles/*.js --dist-dir wwwroot/js --no-source-maps",
+    "clean:parcel-cache": "rimraf .parcel-cache/"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
