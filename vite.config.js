@@ -10,7 +10,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, "src/thirdscript.js"),
-        // template2: "src/template2/main2.js",
+        page2script: "src/page2script.js",
       },
       output: {
         entryFileNames: "[name].js", // output names of scripts - [hash] will generate the hash, but YOU NEED TO UPDATE MANUALLY in the cfm files to match if using this feature.
