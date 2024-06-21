@@ -1,11 +1,6 @@
 {
   "name": "your-app",
   "version": "1.0.0",
-  "targets": {
-    "main": {
-      "optimize": true
-    }
-  },
   "scripts": {
     "clean:output": "rimraf wwwroot/js",
     "watch": "npm run clean:output && parcel watch src/mainBundles/*.js --dist-dir wwwroot/js",
