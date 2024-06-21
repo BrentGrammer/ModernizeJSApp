@@ -2,10 +2,12 @@
   "name": "your-app",
   "version": "1.0.0",
   "scripts": {
-    "start": "parcel watch src/mainBundles/*.js --dist-dir wwwroot/js",
-    "build": "parcel build src/mainBundles/*.js --dist-dir wwwroot/js"
+    "clean:output": "rimraf wwwroot/js",
+    "start": "npm run clean:output && parcel watch src/mainBundles/*.js --dist-dir wwwroot/js",
+    "build": "npm run clean:output && parcel build src/mainBundles/*.js --dist-dir wwwroot/js"
   },
   "devDependencies": {
-    "parcel": "^2.12.0"
+    "parcel": "^2.12.0",
+    "rimraf": "^5.0.7"
   }
 }

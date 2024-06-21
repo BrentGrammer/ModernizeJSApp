@@ -587,7 +587,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 var _firstscriptJs = require("../mainTemplateJS/firstscript.js");
 var _secondscriptJs = require("../mainTemplateJS/secondscript.js");
 var _thirdscriptJs = require("../mainTemplateJS/thirdscript.js");
-console.log("mainTemplate.js - importing first second and third scripts");
+console.log("mainTemplate.js - importing first second and third scripts.");
 
 },{"../mainTemplateJS/firstscript.js":"1hQ3K","../mainTemplateJS/secondscript.js":"t3Rix","../mainTemplateJS/thirdscript.js":"l5veU"}],"1hQ3K":[function(require,module,exports) {
 console.log("Hello from firstscript.js");
