@@ -15,3 +15,7 @@
   - starts vite in watch mode to produce updated bundles when JS src files change
     - starts bundling script files into the /wwwroot/js folder and watches changes.
     - After making a change to the JS files, refresh the page in the browser to see updates with the CFM page served.
+
+## Notes
+
+- Vite auto empties the out directory when building.
