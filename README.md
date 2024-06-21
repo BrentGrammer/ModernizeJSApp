@@ -2,10 +2,6 @@
 
 - Attempting to add Vite tooling.
 
-## Goals/Issues
-
-- Bundles are produced, but source maps are lost which are vital during development for debugging.
-
 ## Run the app
 
 ### Install dependencies
