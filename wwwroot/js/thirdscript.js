@@ -1,2 +1,2 @@
-console.log('running epc.run from thirdscript...');
-console.log(epc.run());
+console.log("running someGlobal.run from thirdscript...");
+console.log(someGlobal.run());
