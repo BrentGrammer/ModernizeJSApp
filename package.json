@@ -2,8 +2,8 @@
   "name": "your-app",
   "version": "1.0.0",
   "scripts": {
-    "start": "parcel watch src/**/*.js --dist-dir wwwroot/js",
-    "build": "parcel build src/**/*.js --dist-dir wwwroot/js"
+    "start": "parcel watch src/mainBundles/*.js --dist-dir wwwroot/js",
+    "build": "parcel build src/mainBundles/*.js --dist-dir wwwroot/js"
   },
   "devDependencies": {
     "parcel": "^2.12.0"

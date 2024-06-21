@@ -1,1 +1,0 @@
-{"mappings":"ACAA,QAAQ,GAAG,CAAC","sources":["<anon>","src/page2TemplateJS/page2script.js"],"sourcesContent":["(() => {\nconsole.log(\"This is javascript that runs on page2\");\n\n})();\n//# sourceMappingURL=page2script.js.map\n","console.log(\"This is javascript that runs on page2\");"],"names":["console","log"],"version":3,"file":"page2script.js.map"}
