@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import path from 'path';
+import { resolve } from "path";
 
 export default defineConfig({
   root: "./src",
@@ -9,8 +9,8 @@ export default defineConfig({
     sourcemap: true, // set this to get source files in devtools
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, "src/thirdscript.js"),
-        page2script: "src/page2script.js",
+        main: resolve(__dirname, "src/thirdscript.js"),
+        page2script: resolve(__dirname, "src/page2script.js"),
       },
       output: {
         entryFileNames: "[name].js", // output names of scripts - [hash] will generate the hash, but YOU NEED TO UPDATE MANUALLY in the cfm files to match if using this feature.
@@ -18,5 +18,5 @@ export default defineConfig({
         // assetFileNames: "[name]/[name].[ext]", // Add hash for assets // in cfm file:  <!-- Include the bundled JavaScript file with cache busting --> <script type="module" src="dist/template1/main1.[hash].js"></script>
       },
     },
-  }
+  },
 });
