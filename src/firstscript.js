@@ -1,3 +1,3 @@
-console.log('Hello from firstscript.js');
+console.log("Hello from firstscript.js");
 
-var epc = {};
+var someGlobal = {};
