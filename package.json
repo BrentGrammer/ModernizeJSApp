@@ -4,7 +4,7 @@
   "scripts": {
     "clean:output": "rimraf wwwroot/js",
     "watch": "npm run clean:output && parcel watch src/mainBundles/*.js --dist-dir wwwroot/js",
-    "start": "concurrently \"docker compose up\" \"npm run watch\"",
+    "start": "concurrently --raw \"docker compose up\" \"npm run watch\"",
     "build": "npm run clean:output && parcel build src/mainBundles/*.js --dist-dir wwwroot/js --no-source-maps",
     "clean:parcel-cache": "rimraf .parcel-cache/"
   },
