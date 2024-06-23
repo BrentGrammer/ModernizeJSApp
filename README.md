@@ -2,11 +2,18 @@
 
 - Attempting to add Vite tooling.
 
+## Prerequisites
+
+- Docker Desktop
+- Node.js
+- [Command Box](https://www.ortussolutions.com/products/commandbox) (if using tests)
+
 ## Run the app
 
 ### Install dependencies
 
 - `npm install`
+- `box install`
 
 ### Start the server with Docker and run Vite bundler
 
