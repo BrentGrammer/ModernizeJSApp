@@ -5,3 +5,13 @@ window.someGlobal = {}; // This is a global variable used by other scripts liste
 export const afunction = function (someArg) {
   return "This is what was passed into firstcripts afunction: " + someArg;
 };
+
+$.when($.ready).then(function () {
+  console.log("JQuery recognized in firstscript.js. Document is ready.");
+});
+
+// appManager is a global set in a script tag in mainTemplate.cfm
+appManager.updateDisplay = function() {
+  console.log('I am updating the display - app manager.');
+}
+

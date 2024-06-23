@@ -17,7 +17,8 @@
         </cfquery>
 
         <cfloop query="qUsers">
-            <cfset var user = StructNew()>
+            <cfset var user = CreateObject("component", "model.user").init()>
+
             <cfset user.id = qUsers.id>
             <cfset user.username = qUsers.username>
             <cfset user.email = qUsers.email>
@@ -50,29 +51,20 @@
         <cfreturn user>
     </cffunction>
 
-    <cffunction name="createUser" access="public" returntype="numeric" output="false">
+    <cffunction name="createUser" access="public" returntype="void" output="false">
         <cfargument name="username" type="string" required="true">
         <cfargument name="email" type="string" required="true">
         <cfargument name="password" type="string" required="true">
         
-        <cfset var userId = 0>
-        <cfset var qCreateUser = "">
-        
-        <cfquery name="qCreateUser" datasource="#variables.dsn#" result="qResult">
+        <cfquery datasource="#variables.dsn#">
             INSERT INTO users (username, email, password, createdDate)
             VALUES (
-                <cfqueryparam value="#arguments.username#" cfsqltype="cf_sql_varchar">,
-                <cfqueryparam value="#arguments.email#" cfsqltype="cf_sql_varchar">,
-                <cfqueryparam value="#hash(arguments.password, 'SHA-256')#" cfsqltype="cf_sql_varchar">,
-                <cfqueryparam value="#now()#" cfsqltype="cf_sql_timestamp">
+                <cfqueryparam value="#arguments.username#" cfsqltype="cf_sql_varchar">
+                , <cfqueryparam value="#arguments.email#" cfsqltype="cf_sql_varchar">
+                , <cfqueryparam value="#arguments.password#" cfsqltype="cf_sql_varchar">
+                , <cfqueryparam value="#now()#" cfsqltype="cf_sql_timestamp">
             )
         </cfquery>
-        
-        <cfif structKeyExists(qResult, "generatedKey")>
-            <cfset userId = qResult.generatedKey>
-        </cfif>
-        
-        <cfreturn userId>
     </cffunction>
 
 </cfcomponent>
