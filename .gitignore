@@ -25,3 +25,17 @@ dist-ssr
 
 # need to ignore this with parcel
 .parcel-cache
+# MySQL
+# Database configuration
+/config/database.properties
+/config/database.json
+/config/database.cfm
+
+# MySQL data directory (per local machine)
+/mysql-data/
+
+mysql-error.log
+mysql-query.log
+
+# Temporary files
+*.tmp
