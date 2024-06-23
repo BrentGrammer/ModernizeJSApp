@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "watch": "vite build --watch",
-    "start": "concurrently \"docker compose up\" \"npm run watch\""
+    "docker:down": "docker compose down",
+    "start": "concurrently --raw --kill-others-on-fail \"docker compose up\" \"npm run watch\" || npm run docker:down\""
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
