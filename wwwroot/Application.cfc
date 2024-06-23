@@ -34,7 +34,12 @@ component displayname="Application" output="false" hint="Handle the application"
          password: "encrypted:6fb14807007a792d72403ace8da5f8f437a2a1caff074031", // this has to be the encrypted value of the password (not the pw chars directly...)
      };
  
-    this.datasource = "appDB"
+    this.datasource = "appDB";
+
+    // Set up a mapping for the model directory
+    this.mappings["/model"] = getDirectoryFromPath(getCurrentTemplatePath()) & "../model";
+    this.mappings["/service"] = getDirectoryFromPath(getCurrentTemplatePath()) & "../service";
+    this.mappings["/handlers"] = getDirectoryFromPath(getCurrentTemplatePath()) & "../handlers";
  
      /**
      * @hint First function run when Lucee receives the first request. 
