@@ -13,7 +13,7 @@
 ### Install dependencies
 
 - `npm install`
-- If using tests, run `box install` to install dependencies for TestBox
+- (Optional) If using tests, run `box install` to install dependencies for TestBox
 
 ### Start the server with Docker and run Vite bundler
 
