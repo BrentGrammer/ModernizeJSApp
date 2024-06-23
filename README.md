@@ -23,6 +23,11 @@
   - starts bundling js with parcel in watch mode.
   - Go to http://localhost:8080
 
+### Stop the server
+
+- CTRL/CMD-C in the terminal running the app
+- run `docker compose down`
+
 ## Branches
 
 - Each branch is an iteration of the app trying out different tooling and setup.
