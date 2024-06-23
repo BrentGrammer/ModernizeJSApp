@@ -10,12 +10,15 @@
 
 - Docker Desktop
 - Node.js
+- [Command Box](https://www.ortussolutions.com/products/commandbox) (Optional, only needed if using tests)
 
 ## Run the app
 
 ### Install Dependencies
 
 - in a terminal: `npm install`
+- (Optional) If using tests, run `box install` to install dependencies for TestBox
+  - Requires installing command box on your local machine.
 
 ### Start the server
 
