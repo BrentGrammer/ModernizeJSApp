@@ -39,3 +39,6 @@ mysql-query.log
 
 # Temporary files
 *.tmp
+
+# TestBox
+testbox
