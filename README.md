@@ -6,7 +6,7 @@
 
 - Docker Desktop
 - Node.js
-- [Command Box](https://www.ortussolutions.com/products/commandbox) (if using tests)
+- [Command Box](https://www.ortussolutions.com/products/commandbox) (Optional - only neede if using tests with TestBox)
 
 ## Run the app
 
@@ -14,6 +14,7 @@
 
 - `npm install`
 - (Optional) If using tests, run `box install` to install dependencies for TestBox
+  - Note: requires installing Command Box on your local machine.
 
 ### Start the server with Docker and run Vite bundler
 
