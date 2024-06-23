@@ -22,3 +22,19 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# MySQL
+# Database configuration
+/config/database.properties
+/config/database.json
+/config/database.cfm
+
+# MySQL data directory (per local machine)
+/mysql-data/
+
+*.log
+mysql-error.log
+mysql-query.log
+
+# Temporary files
+*.tmp
