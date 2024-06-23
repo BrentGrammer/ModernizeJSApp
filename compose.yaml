@@ -9,12 +9,3 @@ services:
       - 8080:8080
     volumes:
       - ./:/app
-  # trying to automate npm run watch - does not work - error missing rollup dependency
-  # vite:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile.vite
-  #   volumes:
-  #     - ./:/app
-  #   depends_on:
-  #     - server
