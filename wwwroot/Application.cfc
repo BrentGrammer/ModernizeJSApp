@@ -24,8 +24,10 @@ component displayname="Application" output="false" hint="Handle the application"
     //        ,idleTimespan: CreateTimeSpan( 0, 0, 0, 10 )
     //    } 
     // ];
+
+    this.datasourceName = "appdb"
  
-    this.datasources["appdb"] = {
+    this.datasources[this.datasourceName] = {
          class: "com.mysql.cj.jdbc.Driver", 
          bundleName: "com.mysql.cj", 
          bundleVersion: "8.0.33",
@@ -34,7 +36,7 @@ component displayname="Application" output="false" hint="Handle the application"
          password: "encrypted:6fb14807007a792d72403ace8da5f8f437a2a1caff074031", // this has to be the encrypted value of the password (not the pw chars directly...)
      };
  
-    this.datasource = "appDB";
+    this.datasource = this.datasourceName;
 
     // Set up a mapping for the model directory
     this.mappings["/model"] = getDirectoryFromPath(getCurrentTemplatePath()) & "../model";
@@ -45,6 +47,12 @@ component displayname="Application" output="false" hint="Handle the application"
      * @hint First function run when Lucee receives the first request. 
      */
      public boolean function OnApplicationStart(){
-         return true;
+        // set up global settings/variables
+        application.dsn = this.datasourceName;
+        return true;
+     }
+
+     public boolean function onRequestStart() {
+        return onApplicationStart(); //reload variables into scope
      }
  }
