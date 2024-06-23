@@ -5,6 +5,10 @@ component displayname="Application" output="false" hint="Handle the application"
     this.locale = "en_US"; 
  
     this.charset.web="UTF-8";
+
+    // set app timeout to 1 day - if too short, then onApplicationStart could run every request
+    this.applicationTimeout = createTimeSpan( 1, 0, 0, 0 );
+    this.sessionTimeout = createTimeSpan( 0, 0, 30, 0 );
  
     //  MAIL SERVERS 
     //  defines one or more mail server connections. 
@@ -47,11 +51,14 @@ component displayname="Application" output="false" hint="Handle the application"
      * @hint First function run when Lucee receives the first request. 
      */
      public boolean function OnApplicationStart(){
+        dump('onapplication start fired');
         // set up global settings/variables
         application.dsn = this.datasourceName;
+        application.rootDirectory = expandPath("../");
         return true;
      }
 
+     // Not sure why this is needed, otherwise variables do not persist across requests, something could be wrong. Does OnApplicationStart persist variables across request?
      public boolean function onRequestStart() {
         return onApplicationStart(); //reload variables into scope
      }
