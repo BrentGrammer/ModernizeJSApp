@@ -21,11 +21,11 @@ The goal is to try to experiment with ways to modernize the application by addin
 - Docker Desktop
 - [Command Box](https://www.ortussolutions.com/products/commandbox) if using TestBox and running tests
 
-## Install Dependencies
+### Install Dependencies
 
 - (Optional) If using tests, run `box install` to install dependencies for TestBox
 
-## Run the aapp
+## Run the App
 
 - `docker compose up`
 - Go to http://localhost:8080
