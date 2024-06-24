@@ -2,6 +2,10 @@
 
 - Attempting to add Vite tooling.
 
+## Issues
+
+- Docker containers do not shut down gracefully on CTRL-C due to concurrently setup in npm scripts.
+
 ## Prerequisites
 
 - Docker Desktop
@@ -23,6 +27,7 @@
   - starts vite in watch mode to produce updated bundles when JS src files change
     - starts bundling script files into the /wwwroot/js folder and watches changes.
     - After making a change to the JS files, refresh the page in the browser to see updates with the CFM page served.
+    - Note: the /libs directory is preserved when bundles are rebuilt to retain legacy libraries if needed.
 
 ## Notes
 
