@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "clean": "find wwwroot/js -not -path \"wwwroot/js/libs\" -not -path \"wwwroot/js/libs/*\" \\( -type f -o -type d -empty \\) -exec rm -rf {} +",
+    "build": "npm run clean && vite build",
+    "watch": "npm run clean && vite build --watch",
     "preview": "vite preview",
-    "watch": "vite build --watch",
     "docker:down": "docker compose down",
     "start": "concurrently --raw --kill-others-on-fail \"docker compose up\" \"npm run watch\" || npm run docker:down\""
   },

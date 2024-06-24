@@ -5,7 +5,7 @@ export default defineConfig({
   root: "./src",
   build: {
     outDir: "../wwwroot/js",
-    emptyOutDir: true,
+    emptyOutDir: false,
     sourcemap: true, // set this to get source files in devtools
     rollupOptions: {
       input: {
