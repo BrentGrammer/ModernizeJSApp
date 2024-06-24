@@ -2,9 +2,10 @@
   "name": "your-app",
   "version": "1.0.0",
   "scripts": {
-    "clean:output": "rimraf wwwroot/js",
+    "clean:output": "find wwwroot/js -not -path \"wwwroot/js/libs\" -not -path \"wwwroot/js/libs/*\" \\( -type f -o -type d -empty \\) -exec rm -rf {} +",
     "watch": "npm run clean:output && parcel watch src/mainBundles/*.js --dist-dir wwwroot/js",
-    "start": "concurrently --raw \"docker compose up\" \"npm run watch\"",
+    "docker:down": "docker compose down",
+    "start": "concurrently --raw --kill-others-on-fail \"docker compose up\" \"npm run watch\" || npm run docker:down\"",
     "build": "npm run clean:output && parcel build src/mainBundles/*.js --dist-dir wwwroot/js --no-source-maps",
     "clean:parcel-cache": "rimraf .parcel-cache/"
   },
