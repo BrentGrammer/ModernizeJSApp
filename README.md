@@ -4,6 +4,12 @@ This is an experimental project meant to explore how to add tooling and bundlers
 
 The app on the master branch simulates a legacy application with global variables, script tags (no module management/import export syntax), storing and including libraries at a static version (such as jQuery), no automated testing or tests and general older ways of designing a web application (no frameworks or modern tooling).
 
+#### The app consists of:
+
+- A Lucee server
+- A MySQL database
+- JavaScript (vanilla and using JQuery)
+
 ### Goal and Purpose of the Project
 
 The goal is to try to experiment with ways to modernize the application by adding tooling such as bundlers, a node.js environment for package management, and adding regression resilience via unit and integration tests.
