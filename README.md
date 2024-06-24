@@ -4,7 +4,7 @@
 
 ## Issues
 
-- Docker containers do not shut down gracefully on CTRL-C due to concurrently setup.
+- Docker containers do not shut down gracefully on CTRL-C due to concurrently setup in npm scripts.
 
 ## Prerequisites
 
