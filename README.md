@@ -1,10 +1,10 @@
 # Modernize using Parcel
 
-- This is an experimental project meant to explore how to add tooling and bundlers such as Vite, Parcel, ESBuild or Webpack to a app using vanilla JavaScript, Lucee and no tooling.
+- Adding the tool [Parcel](https://parceljs.org/) to the app.
 
 ## Issues
 
-- how to automate npm run start after docker container starts serving Lucee server?
+- Docker containers do not shut down gracefully on CTRL-C due to concurrently setup.
 
 ## Prerequisites
 
