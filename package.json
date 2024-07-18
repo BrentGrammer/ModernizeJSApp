@@ -1,0 +1,13 @@
+{
+  "name": "modernizelegacyapp",
+  "version": "1.0.0",
+  "description": "This is an experimental project meant to explore how to add tooling and bundlers such as Vite, Parcel, ESBuild or Webpack to a multi-page app using vanilla JavaScript and Lucee (serving CFML .CFM pages) without any tooling to start with.",
+  "scripts": {
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "vitest": "^2.0.3"
+  },
+  "author": "",
+  "license": "ISC"
+}

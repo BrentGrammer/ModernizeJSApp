@@ -20,6 +20,7 @@ The goal is to try to experiment with ways to modernize the application by addin
 
 - Docker Desktop
 - [Command Box](https://www.ortussolutions.com/products/commandbox) if using TestBox and running tests
+- Node.js - LTS
 
 ### Install Dependencies
 
