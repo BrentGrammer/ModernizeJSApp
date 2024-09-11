@@ -22,11 +22,10 @@ component displayname="Application" output="false" hint="Handle the application"
       };
 
       this.datasource = this.dsn;
+
+      this.directory = Left(expandPath("."), findNoCase("wwwroot", expandPath(".")) - 1);
  
-      this.mappings["/app"] = "/";
-      this.mappings["/model"] = "../model";
-      this.mappings["/service"] = "/app/service";
-      this.mappings["/handlers"] = "/app/handlers";
+      this.mappings["/apps"] = this.directory;
 
       public boolean function OnApplicationStart(){
          // set up global settings/variables
@@ -35,10 +34,14 @@ component displayname="Application" output="false" hint="Handle the application"
 
          application.addressComponent = createObject("component", "../model/AddressComponent").init();
 
-         application.userComponent = CreateObject("component", "../model/UserComponent").init(
+         application.userComponent = createObject("component", "apps.model.UserComponent").init(
             dsn=application.dsn,
             addressComponent=application.addressComponent
          );
+
+         application.userHandler = createObject("component", "apps.handlers.UserHandler");
+
+         application.userService = createObject("component", "apps.service.UserService").init(dsn=application.dsn);
          return true;
       }
 

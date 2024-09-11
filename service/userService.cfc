@@ -17,7 +17,7 @@
         </cfquery>
 
         <cfloop query="qUsers">
-            <cfset var user = CreateObject("component", "model.user").init()>
+            <cfset var user = CreateObject("component", "apps.model.user").init()>
 
             <cfset user.id = qUsers.id>
             <cfset user.username = qUsers.username>

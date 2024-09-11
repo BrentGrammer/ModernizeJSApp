@@ -17,9 +17,8 @@
                     if (NOT structKeyExists(form, "username") || NOT structKeyExists(form, "email") || NOT structKeyExists(form, "password")) {
                         cfcontent(type="application/json", variable=charsetDecode(serializeJSON({ success=false, message="Missing Form Data."}), 'utf-8'));
                     } 
-                    userHandler = CreateObject("component", "handlers.UserHandler");
                     
-                    result = userHandler.createUser(
+                    result = application.userHandler.createUser(
                         username = form.username,
                         email = form.email,
                         password = form.password

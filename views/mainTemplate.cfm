@@ -1,7 +1,7 @@
 <main>
     <h1>Main Template</h1>
-    <cfset userService = CreateObject("component", "../service/userService").init("appDB")>
-    <cfset users = userService.getAllUsers()>
+
+    <cfset users = application.userService.getAllUsers()>
 
     <nav>
         <a href="?page=page2">Go to page 2</a>

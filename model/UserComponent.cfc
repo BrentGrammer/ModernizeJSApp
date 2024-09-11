@@ -10,7 +10,7 @@ component {
 
     public user function userWithAddress() {
         var userAddr = this.addressComponent.getUserAddress();
-        var user = new model.user();
+        var user = new apps.model.user();
         user.setAddress(userAddr);
 
         return user;

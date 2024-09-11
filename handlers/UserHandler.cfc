@@ -5,10 +5,9 @@
         <cfargument name="password" type="string" required="true">
         
         <cfset var response = {}>
-        <cfset var userService = CreateObject("component", "service.userService").init(application.dsn)>
         
         <cftry>
-            <cfset userService.createUser(arguments.username, arguments.email, arguments.password)>
+            <cfset application.userService.createUser(arguments.username, arguments.email, arguments.password)>
             
             <cfset response = {
                 "success": true,
