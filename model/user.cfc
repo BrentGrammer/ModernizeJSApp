@@ -1,18 +1,21 @@
-<cfcomponent displayname="User" output="false">
-    <cfproperty name="id" type="numeric">
-    <cfproperty name="username" type="string">
-    <cfproperty name="email" type="string">
-    <cfproperty name="password" type="string">
-    <cfproperty name="createdDate" type="date">
+component accessors="true" {
 
-    <cffunction name="init" access="public" returntype="User" output="false">
-        <cfscript>
-        variables.id = 0;
-        variables.username = "";
-        variables.email = "";
-        variables.password = "";
-        variables.createdDate = now();
-        </cfscript>
-        <cfreturn this>
-    </cffunction>
-</cfcomponent>
+    property name="id" type="numeric";
+    property name="username" type="string";
+    property name="email" type="string";
+    property name="password" type="string";
+    property name="createdDate" type="date";
+    property name="address" type="string";
+
+    public function init() {
+        return this;
+    }
+
+    this.setid(0);
+    this.setusername("");
+    this.setemail("");
+    this.setpassword("");
+    this.setcreatedDate(now());
+    this.setAddress("");
+
+}

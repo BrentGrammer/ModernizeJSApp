@@ -21,6 +21,13 @@
             <li><cfoutput>#user.username#</cfoutput></li>
         </cfloop>
     </ul>
+
+    <cfscript>
+        userWithAddr = application.userComponent.userWithAddress();
+    </cfscript> 
+
+    <h2>A User Address</h2>
+    <p><cfoutput>#userWithAddr.getAddress()#</cfoutput></p>
     
     <script src="/js/libs/jQuery.min.js"></script>
     <script>
