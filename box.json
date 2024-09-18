@@ -1,8 +1,10 @@
 {
     "dependencies":{
-        "testbox":"^5.4.0+7"
+        "testbox":"^5.4.0+7",
+        "wirebox":"^7.3.0+16"
     },
     "installPaths":{
-        "testbox":"testbox/"
+        "testbox":"testbox/",
+        "wirebox":"wirebox/"
     }
 }
