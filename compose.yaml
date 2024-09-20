@@ -1,18 +1,23 @@
 services:
   server:
-    build: .
+    image: "ortussolutions/commandbox:jdk11"
     container_name: luceeServer
     environment:
       - cfconfig_adminPassword=admin # set the admin page password
       - BOX_SERVER_PROFILE=development # needed to start in development and enable admin
-      - BOX_SERVER_PORT=8080
+      # - BOX_SERVER_PORT=8080
       # - BOX_SERVER_HOST=0.0.0.0
+      # - JDK_JAVA_OPTIONS="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:9999 -javaagent:/opt/luceedebug/luceedebug.jar=jdwpHost=localhost,jdwpPort=9999,debugHost=0.0.0.0,debugPort=10000,jarPath=/opt/luceedebug/luceedebug.jar"
+      # - JAVA_OPTS="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:9999"
+      # - JAVA_AGENT="-javaagent:/opt/luceedebug/luceedebug.jar=jdwpHost=localhost,jdwpPort=9999,debugHost=0.0.0.0,debugPort=10000,jarPath=/opt/luceedebug/luceedebug.jar"
+      - BOX_JAVA_ARGS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:9999 -javaagent:/opt/luceedebug/luceedebug.jar=jdwpHost=localhost,jdwpPort=9999,debugHost=0.0.0.0,debugPort=10000,jarPath=/opt/luceedebug/luceedebug.jar
     ports:
       - 8080:8080
-      # - 9999:9999
-      # - 10000:10000 # Debugger port
+      - 9999:9999
+      - 10000:10000 # Debugger port
     volumes:
       - ./:/app
+      - ./luceedebug-2.0.14.jar:/opt/luceedebug/luceedebug.jar
     depends_on:
       - db
   db:

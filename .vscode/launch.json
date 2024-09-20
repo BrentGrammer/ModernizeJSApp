@@ -18,13 +18,6 @@
       ],
     },
     {
-      "type": "lucee",
-      "request": "attach",
-      "name": "Lucee Debug B",
-      "hostName": "localhost",
-      "port": 10000
-    },
-    {
         "type": "cfml",
         "request": "attach",
         "name": "Lucee Debug C",
@@ -40,9 +33,22 @@
       {
         "type": "cfml",
         "request": "attach",
-        "name": "Lucee Debug D",
+        "name": "Lucee Debug E",
         "hostName": "localhost",
-        "port": 8000,
+        "port": 10000,
+        "pathTransforms": [
+          {
+            "idePrefix": "${workspaceFolder}",
+            "serverPrefix": "/app/wwwroot"
+          }
+        ],
+      },
+      {
+        "type": "cfml",
+        "request": "attach",
+        "name": "Lucee Debug F",
+        "hostName": "localhost",
+        "port": 9999,
         "pathTransforms": [
           {
             "idePrefix": "${workspaceFolder}",
@@ -53,15 +59,23 @@
       {
         "type": "cfml",
         "request": "attach",
-        "name": "Lucee Debug E",
+        "name": "Lucee Debug G",
         "hostName": "localhost",
-        "port": 8080,
+        "port": 9999,
         "pathTransforms": [
           {
             "idePrefix": "${workspaceFolder}",
-            "serverPrefix": "/app"
+            "serverPrefix": "/app/wwwroot"
           }
         ],
+      },
+      {
+        "type": "cfml",
+        "request": "attach",
+        "name": "Lucee Debug H",
+        "hostName": "localhost",
+        "port": 10000,
+        "pathTransforms": [],
       }
   ]
 }
