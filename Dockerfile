@@ -6,6 +6,7 @@ WORKDIR /app
 
 EXPOSE 8080
 
+# For some reason CMD causes an exit with code 0 and the server never starts (??)
 # CMD ["box", "server", "start", "--console"] # adding console seems to keep process in foreground
 # CMD ["box", "server", "start"]
 
