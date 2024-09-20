@@ -1,8 +1,8 @@
 {
-    "profile": "production",
-    "web": {
-      "blockCFAdmin": false,
-      "blockSensitivePaths": false,
-      "webroot": "/app/wwwroot"
+    "profile":"production",
+    "web":{
+        "blockCFAdmin":false,
+        "blockSensitivePaths":false,
+        "webroot":"/app/wwwroot"
     }
 }
