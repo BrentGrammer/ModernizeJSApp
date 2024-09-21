@@ -1,4 +1,5 @@
 {
+    "openBrowser":false,
     "profile":"production",
     "web":{
         "blockCFAdmin":false,
