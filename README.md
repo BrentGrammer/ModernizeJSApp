@@ -1,6 +1,6 @@
 # Debugger - Luceedebug
 
-Adding Luceedebug to the application to enable line by line stepping and debugging in the Lucee CFML code.
+Using a Dockerfile to build on top of a Lucee image such as `commandbox:lucee5`
 
 - [Installation Guide](https://docs.lucee.org/guides/Various/lucee-step-debugger-installation-guide.html)
 
