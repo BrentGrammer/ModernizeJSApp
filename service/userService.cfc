@@ -67,21 +67,4 @@
         </cfquery>
     </cffunction>
 
-    
-    <cffunction name="createUser" access="public" returntype="void" output="false">
-        <cfargument name="username" type="string" required="true">
-        <cfargument name="email" type="string" required="true">
-        <cfargument name="password" type="string" required="true">
-        
-        <cfquery datasource="#variables.dsn#">
-            INSERT INTO users (username, email, password, createdDate)
-            VALUES (
-                <cfqueryparam value="#arguments.username#" cfsqltype="cf_sql_varchar">
-                , <cfqueryparam value="#arguments.email#" cfsqltype="cf_sql_varchar">
-                , <cfqueryparam value="#arguments.password#" cfsqltype="cf_sql_varchar">
-                , <cfqueryparam value="#now()#" cfsqltype="cf_sql_timestamp">
-            )
-        </cfquery>
-    </cffunction>
-
 </cfcomponent>
