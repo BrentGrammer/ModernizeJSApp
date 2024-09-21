@@ -2,6 +2,7 @@
 
 Adding Luceedebug to the application to enable line by line stepping and debugging in the Lucee CFML code.
 
+- [luceedebug GitHub](https://github.com/softwareCobbler/luceedebug)
 - [Installation Guide](https://docs.lucee.org/guides/Various/lucee-step-debugger-installation-guide.html)
 
 ## Prerequisites
