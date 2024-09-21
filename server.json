@@ -1,8 +1,15 @@
 {
     "profile": "production",
     "web": {
-      "blockCFAdmin": false,
-      "blockSensitivePaths": false,
-      "webroot": "/app/wwwroot"
+        "blockCFAdmin": false,
+        "blockSensitivePaths": false,
+        "webroot": "/app/wwwroot"
+    },
+    "jvm": {
+        "args": [
+            "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=localhost:9999",
+            "-javaagent:/opt/luceedebug/luceedebug.jar=jdwpHost=localhost,jdwpPort=9999,debugHost=0.0.0.0,debugPort=10000,jarPath=/opt/luceedebug/luceedebug.jar"
+        ],
+        "javaVersion": "openjdk11_jdk"
     }
 }
