@@ -16,66 +16,6 @@
           "serverPrefix": "/app"
         }
       ],
-    },
-    {
-        "type": "cfml",
-        "request": "attach",
-        "name": "Lucee Debug C",
-        "hostName": "localhost",
-        "port": 10000,
-        "pathTransforms": [
-          {
-            "idePrefix": "${workspaceFolder}",
-            "serverPrefix": "/var/www"
-          }
-        ]
-      },
-      {
-        "type": "cfml",
-        "request": "attach",
-        "name": "Lucee Debug E",
-        "hostName": "localhost",
-        "port": 10000,
-        "pathTransforms": [
-          {
-            "idePrefix": "${workspaceFolder}",
-            "serverPrefix": "/app/wwwroot"
-          }
-        ],
-      },
-      {
-        "type": "cfml",
-        "request": "attach",
-        "name": "Lucee Debug F",
-        "hostName": "localhost",
-        "port": 9999,
-        "pathTransforms": [
-          {
-            "idePrefix": "${workspaceFolder}",
-            "serverPrefix": "/app"
-          }
-        ],
-      },
-      {
-        "type": "cfml",
-        "request": "attach",
-        "name": "Lucee Debug G",
-        "hostName": "localhost",
-        "port": 9999,
-        "pathTransforms": [
-          {
-            "idePrefix": "${workspaceFolder}",
-            "serverPrefix": "/app/wwwroot"
-          }
-        ],
-      },
-      {
-        "type": "cfml",
-        "request": "attach",
-        "name": "Lucee Debug H",
-        "hostName": "localhost",
-        "port": 10000,
-        "pathTransforms": [],
-      }
+    }
   ]
 }
